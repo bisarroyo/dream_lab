@@ -1,6 +1,13 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import Home from './pages/Home'
+import { Provider } from 'react-redux'
+
+import store from './store'
+import App from '@routes/App'
 
 const root = ReactDOM.createRoot(document.getElementById('app'))
-root.render(<Home />)
+root.render(
+  <Provider store={store}>
+    <App />
+  </Provider>
+)
