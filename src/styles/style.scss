@@ -1,0 +1,22 @@
+// fonts
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
+
+// abstracts
+@import './abstracts/variables',
+  './abstracts/functions',
+  'abstracts/mixins';
+
+//base
+@import 'base/base',
+  'base/typography';
+
+// components
+@import './components/container',
+  './components/button',
+  './components/input',
+  './components/navbar',
+  'components/sidebar';
+
+*{
+  font-family: $font-nunito;
+}

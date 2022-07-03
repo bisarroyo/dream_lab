@@ -1,0 +1,30 @@
+%btn {
+  border: none;
+  padding: 7px 15px;
+  text-align: center;
+  color: $ligth;
+  font-size: 1.8rem;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  
+}
+
+.btn-{
+  &primary, &secondary{
+    @extend %btn
+  }
+
+  &primary{
+    background-color: $primary;
+    &:hover {
+      background-color: darken($color: $primary, $amount: 10)
+    }
+  }
+  
+  &secondary{
+    background-color: $secondary;
+    &:hover {
+      background-color: darken($color: $secondary, $amount: 10)
+    }
+  }
+}

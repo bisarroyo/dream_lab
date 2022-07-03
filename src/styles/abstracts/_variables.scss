@@ -1,0 +1,28 @@
+// colors
+$primary : #ff9f1c;
+$secondary: #e71d36;
+$third: #2ec4b6;
+$ligth: #fdfffc;
+$dark: #011627;
+
+//breakpoint screen size
+$breakpoints: (
+  'xs': 1px,
+  'sm': 576px,
+  'md': 768px,
+  'lg': 992px,
+  'xl': 1200px,
+);
+
+//orientation
+$orientations: (
+    'portrait': portrait,
+    'landscape': landscape
+);
+
+//fonts
+$font-nunito:'Nunito', sans-serif;
+
+.primary {
+  color: $primary;
+}

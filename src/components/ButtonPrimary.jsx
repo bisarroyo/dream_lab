@@ -1,12 +1,15 @@
 import React from 'react'
-import ButtonPrimaryStyle from '@styles/components/ButtonPrimaryStyle'
 
 const ButtonPrimary = (props) => {
-  const { text } = props
+  const { text, type, disabled } = props
   return (
-    <ButtonPrimaryStyle>
+    <button
+      className='btn-primary'
+      type={type}
+      disabled={disabled}
+    >
       {text}
-    </ButtonPrimaryStyle>
+    </button>
   )
 }
 export default ButtonPrimary
