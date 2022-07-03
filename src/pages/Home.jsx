@@ -7,7 +7,7 @@ import Input from '@components/Input'
 const Home = () => {
   return (
     <div>
-      <h1>Home</h1>
+      <h1>Home Bismark App</h1>
       {/* <Modal>
         <h1>Modal</h1>
       </Modal> */}
