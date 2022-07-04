@@ -1,0 +1,28 @@
+.modal {
+  background-color: rgba($dark, .8);
+  backdrop-filter: blur(4px);
+  position: fixed;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: all 0.5s ease;
+}
+
+.modal-content {
+  background: $dark;
+  width: 300px;
+  padding: 10px 20px;
+  height: 80vh;
+  margin: 10vh auto;
+  position: relative;
+}
+
+.modal-content .btn {
+  display: block;
+  margin-bottom: 32px;
+  border: none;
+  padding: 0px 15px;
+  font-size: 3rem;
+  background-color: $ligth;
+}

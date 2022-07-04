@@ -12,10 +12,13 @@
 
 // components
 @import './components/container',
+  './components/blog',
   './components/button',
   './components/input',
+  './components/modal',
   './components/navbar',
-  'components/sidebar';
+  './components/sidebar',
+  './components/titles';
 
 *{
   font-family: $font-nunito;

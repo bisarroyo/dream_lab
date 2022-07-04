@@ -23,6 +23,16 @@ $orientations: (
 //fonts
 $font-nunito:'Nunito', sans-serif;
 
-.primary {
-  color: $primary;
-}
+//font size
+$titles: (
+  'h1': 4rem,
+  'h2': 3.5rem,
+  'h3': 3rem,
+  'h4': 2.8rem,
+  'h5': 2.5rem,
+  'h6': 2rem,
+);
+
+$text: (
+  'p': 1.8rem,
+);

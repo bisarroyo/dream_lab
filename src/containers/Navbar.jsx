@@ -5,11 +5,11 @@ const Navbar = ({ toggleSidebar }) => {
   return (
     <nav className='navbar'>
       <ul className='navbar__list'>
-        <Link className='navbar__logo' to='/'>
+        <Link className='navbar__logo' exact to='/'>
           Navbar App
         </Link>
         <li className='navbar__list__item'>
-          <NavLink className='navbar__link' exact to='/'>
+          <NavLink className='navbar__link' to='/'>
             Home
           </NavLink>
         </li>
@@ -29,9 +29,9 @@ const Navbar = ({ toggleSidebar }) => {
           </NavLink>
         </li>
         <li className='navbar__list__item'>
-          <NavLink className='navbar__link' to='/contact'>
-            Contact
-          </NavLink>
+          <div className='navbar__link'>
+            Iniciar sesión
+          </div>
         </li>
         <div className='navbar__button' onClick={toggleSidebar}>
           <div className='navbar__button__component' />
