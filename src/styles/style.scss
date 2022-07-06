@@ -7,13 +7,14 @@
   'abstracts/mixins';
 
 //base
-@import 'base/base',
-  'base/typography';
+@import 'base/base';
 
 // components
 @import './components/container',
   './components/blog',
   './components/button',
+  './components/footer',
+  './components/home',
   './components/input',
   './components/modal',
   './components/navbar',

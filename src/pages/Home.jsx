@@ -4,6 +4,9 @@ import ButtonSecondary from '@components/ButtonSecondary'
 import Input from '@components/Input'
 import Modal from '@containers/Modal'
 
+// import containers
+import HomeContainer from '@containers/HomeContainer'
+
 const Home = () => {
   const [showModal, setShowModal] = useState(false)
 
@@ -14,8 +17,8 @@ const Home = () => {
     setShowModal(true)
   }
   return (
-    <div>
-      <h1>Home Bismark App</h1>
+    <>
+      <HomeContainer />
       {
         showModal && (
           <Modal onClose={handleClose}>
@@ -26,7 +29,7 @@ const Home = () => {
       <ButtonPrimary text='Click me!' onClick={handleOpen} />
       <ButtonSecondary text='Click me!' />
       <Input label='Label' name='name' type='text' placeholder='Placeholder' value='Value' handler={() => {}} />
-    </div>
+    </>
   )
 }
 

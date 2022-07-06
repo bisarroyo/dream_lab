@@ -1,0 +1,55 @@
+%flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.footer {
+  @extend %flex;
+  background-color: $dark;
+  color: $ligth;
+  height: auto;
+  width: 100%;
+  position:fixed; bottom:0;
+  z-index:999999;
+
+  @include respond(sm) {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  &-social {
+    @extend %flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 15px;
+    width: 100px;
+    border-bottom: 1px solid $ligth;
+
+    @include respond(sm) {
+      width: 300px;
+      border-bottom: none;
+    }
+
+    a{
+      @extend %flex;
+      text-decoration: none;
+      font-size: 3rem;
+      color: $ligth;
+      margin-left: 10px;
+      margin: 0 10px 10px 0;
+    }
+  }
+
+  &-copyright {
+    margin: 15px;
+    width: 100%;
+    text-align: center;
+
+    @include respond(sm) {
+      border-left: 1px solid $ligth;
+    }
+  }
+}
