@@ -1,14 +1,19 @@
 import React, { useState } from 'react'
 import ButtonPrimary from '@components/ButtonPrimary'
-import ButtonSecondary from '@components/ButtonSecondary'
 import Input from '@components/Input'
 import Modal from '@containers/Modal'
+import TextBoxContainer from '@containers/TextBoxContainer'
 
 // import containers
 import HomeContainer from '@containers/HomeContainer'
 
 const Home = () => {
   const [showModal, setShowModal] = useState(false)
+  const [contactData, setContactData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  })
 
   const handleClose = () => {
     setShowModal(false)
@@ -16,19 +21,40 @@ const Home = () => {
   const handleOpen = () => {
     setShowModal(true)
   }
+  const handleSubmit = (e) => {
+    e.preventDefault()
+  }
+  const handleChange = (e) => {
+    setContactData({
+      ...contactData,
+      [e.target.name]: e.target.value
+    })
+  }
   return (
     <>
       <HomeContainer />
+      <TextBoxContainer
+        title='Skills'
+        title1='lorem'
+        text1='lorem ipsum dolor sit amet'
+        title2='lorem'
+        text2='lorem ipsum dolor sit amet'
+        title3='lorem'
+        text3='lorem ipsum dolor sit amet'
+      />
       {
         showModal && (
-          <Modal onClose={handleClose}>
-            <h1>Modal</h1>
+          <Modal onClose={handleClose} title='Contact me!'>
+            <form>
+              <Input label='Name' name='name' type='text' placeholder='Juan' value={contactData.name} onChange={handleChange} />
+              <Input label='Email' name='email' type='email' placeholder='you@mail.com' value={contactData.email} onChange={handleChange} />
+              <Input label='Message' name='message' type='text' placeholder='Please write your message' value={contactData.message} onChange={handleChange} />
+              <ButtonPrimary text='Send!' onClick={handleSubmit} />
+            </form>
           </Modal>
         )
       }
-      <ButtonPrimary text='Click me!' onClick={handleOpen} />
-      <ButtonSecondary text='Click me!' />
-      <Input label='Label' name='name' type='text' placeholder='Placeholder' value='Value' handler={() => {}} />
+      <ButtonPrimary text='Cantact me' onClick={handleOpen} />
     </>
   )
 }

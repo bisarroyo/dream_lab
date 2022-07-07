@@ -1,4 +1,4 @@
-%flex {
+%flex-footer {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -7,13 +7,12 @@
 
 
 .footer {
-  @extend %flex;
+  @extend %flex-footer;
   background-color: $dark;
   color: $ligth;
   height: auto;
   width: 100%;
-  position:fixed; bottom:0;
-  z-index:999999;
+  // position:fixed; bottom:0;
 
   @include respond(sm) {
     flex-direction: row;
@@ -21,7 +20,7 @@
   }
 
   &-social {
-    @extend %flex;
+    @extend %flex-footer;
     flex-direction: row;
     flex-wrap: wrap;
     margin-top: 15px;
@@ -34,7 +33,7 @@
     }
 
     a{
-      @extend %flex;
+      @extend %flex-footer;
       text-decoration: none;
       font-size: 3rem;
       color: $ligth;

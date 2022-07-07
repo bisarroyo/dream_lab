@@ -1,16 +1,12 @@
 import React from 'react'
-import bismark from '../assets/images/bismark.jpg'
 
-const BlogContainer = () => {
+const BlogContainer = (props) => {
+  const { title, text } = props
   return (
-    <>
-      <div className='blog-header'>
-        <img className='blog-header__image' src={bismark} alt='Bismark photo' />
-        <h1 className='blog-header__title title-h1'>
-          Bismark Arroyo
-        </h1>
-      </div>
-    </>
+    <div className='text-box'>
+      <h2 className='text-box__title title-h2'>{title}</h2>
+      <p className='text-box__text text-p'>{text}</p>
+    </div>
   )
 }
 

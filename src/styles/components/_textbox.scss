@@ -1,0 +1,39 @@
+%flex-text{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-box {
+  @extend %flex-text;
+  border-radius: 5px;
+  width: 300px;
+  min-height: 100px;
+  border: 1px solid $dark;
+  margin: 10px;
+
+  @include respond(md){
+    width: 220px;
+  }
+  @include respond(lg){
+    width: 320px;
+  }
+  @include respond(xl){
+    margin: 20px;
+  }
+}
+
+.text-box-container {
+  @extend %flex-text;
+  width:100%;
+  // margin: 20px;
+
+  @include respond(md){
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  @include respond(lg){
+    justify-content: center;
+  }
+}
