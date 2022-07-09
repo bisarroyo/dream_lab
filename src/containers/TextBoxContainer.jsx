@@ -1,5 +1,5 @@
 import React from 'react'
-import TextBox from '@components/textbox'
+import TextBox from '@components/TextBox'
 
 const TextBoxContainer = (props) => {
   const {

@@ -1,6 +1,6 @@
 import React from 'react'
 
-const BlogContainer = (props) => {
+const TextBox = (props) => {
   const { title, text } = props
   return (
     <div className='text-box'>
@@ -10,4 +10,4 @@ const BlogContainer = (props) => {
   )
 }
 
-export default BlogContainer
+export default TextBox

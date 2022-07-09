@@ -12,16 +12,6 @@
   min-height: 100px;
   border: 1px solid $dark;
   margin: 10px;
-
-  @include respond(md){
-    width: 220px;
-  }
-  @include respond(lg){
-    width: 320px;
-  }
-  @include respond(xl){
-    margin: 20px;
-  }
 }
 
 .text-box-container {
@@ -32,6 +22,7 @@
   @include respond(md){
     flex-direction: row;
     justify-content: space-around;
+    flex-wrap: wrap;
   }
   @include respond(lg){
     justify-content: center;

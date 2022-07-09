@@ -1,14 +1,19 @@
 import React from 'react'
-import bismark from '../assets/images/bismark.jpg'
+// import bismark from '../assets/images/bismark.jpg'
 
 const HomeHeader = () => {
   return (
     <>
-      <div className='home-header'>
-        <img className='home-header__image' src={bismark} alt='Bismark photo' />
-        <h1 className='home-header__title title-h1'>
-          Bismark Arroyo
-        </h1>
+      <div class='container-home'>
+        <div class='content-home'>
+          <h1>Bismark Arroyo</h1>
+          <p>Web Developer</p>
+        </div>
+        <div class='waves'>
+          <div class='wave circulo a' />
+          <div class='wave circulo b' />
+          <div class='wave circulo c' />
+        </div>
       </div>
     </>
   )

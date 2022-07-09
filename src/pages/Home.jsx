@@ -3,6 +3,8 @@ import ButtonPrimary from '@components/ButtonPrimary'
 import Input from '@components/Input'
 import Modal from '@containers/Modal'
 import TextBoxContainer from '@containers/TextBoxContainer'
+// import AOS from 'aos'
+// import 'aos/dist/aos.css'
 
 // import containers
 import HomeContainer from '@containers/HomeContainer'
@@ -14,6 +16,11 @@ const Home = () => {
     email: '',
     message: ''
   })
+
+  // useEffect(() => {
+  //   AOS.init()
+  //   AOS.refresh()
+  // }, [])
 
   const handleClose = () => {
     setShowModal(false)
