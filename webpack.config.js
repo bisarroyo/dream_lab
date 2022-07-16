@@ -29,7 +29,8 @@ module.exports = {
       '@context': path.resolve(__dirname, 'src/context'),
       '@Api': path.resolve(__dirname, 'src/Api/apiCore.js'),
       '@store': path.resolve(__dirname, 'src/store/store.js'),
-      '@reducers': path.resolve(__dirname, 'src/reducers')
+      '@reducers': path.resolve(__dirname, 'src/reducers'),
+      '@images': path.resolve(__dirname, 'src/assets/images')
     }
   },
   module: {

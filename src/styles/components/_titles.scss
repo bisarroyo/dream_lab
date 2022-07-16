@@ -1,5 +1,5 @@
 @each $name, $size in $titles {
-  .title-#{$name} {
+  #{$name} {
     font-size: $size;
     text-align: center;
   }
@@ -7,7 +7,7 @@
 
 
 @each $name, $size in $text {
-  .text-#{$name} {
+  #{$name} {
     font-size: $size;
   }
 };
