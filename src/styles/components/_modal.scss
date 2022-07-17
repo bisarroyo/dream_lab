@@ -1,5 +1,5 @@
 .modal {
-  background-color: rgba($dark, .8);
+  background-color: rgba($primary, .8);
   backdrop-filter: blur(4px);
   position: fixed;
   bottom: 0;
@@ -16,7 +16,7 @@
   min-height: 30vh;
   margin: 10vh auto;
   position: relative;
-  color: $ligth;
+  color: $light;
 }
 
 .modal-content .btn {
@@ -25,6 +25,6 @@
   border: none;
   padding: 0px 15px;
   font-size: 3rem;
-  background-color: $ligth;
+  background-color: $light;
   cursor: pointer;
 }

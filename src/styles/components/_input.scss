@@ -25,18 +25,17 @@
 
     &:focus, &:hover {
       outline: none;
-      // border-color: $secondary;
+      border-color: $secondary;
     }
   
     &::placeholder {
-      // color: $primary;
-    //  text-align: center;
+      color: $dark;
     }
   }
 }
 
 .input-label {
   font-size: 1.8rem;
-  color: $ligth;
+  color: $light;
   font-weight: bold;
 }

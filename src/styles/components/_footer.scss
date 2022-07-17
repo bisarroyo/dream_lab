@@ -9,7 +9,7 @@
 .footer {
   @extend %flex-footer;
   background-color: $primary;
-  color: $ligth;
+  color: $light;
   height: auto;
   width: 100%;
   // position:fixed; bottom:0;
@@ -25,7 +25,7 @@
     flex-wrap: wrap;
     margin-top: 15px;
     width: 100px;
-    border-bottom: 1px solid $ligth;
+    border-bottom: 1px solid $light;
 
     @include respond(sm) {
       width: 300px;
@@ -36,7 +36,7 @@
       @extend %flex-footer;
       text-decoration: none;
       font-size: 3rem;
-      color: $ligth;
+      color: $light;
       margin-left: 10px;
       margin: 0 10px 10px 0;
     }
@@ -48,7 +48,7 @@
     text-align: center;
 
     @include respond(sm) {
-      border-left: 1px solid $ligth;
+      border-left: 1px solid $light;
     }
   }
 }
