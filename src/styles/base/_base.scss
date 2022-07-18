@@ -14,14 +14,22 @@ body {
     box-sizing: border-box;
 }
 
+body::-webkit-scrollbar {
+	width: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+	background: $primary;
+	border-radius: 5px;
+}
+
+
 %flex {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
-
-
 
 .container{
     width: 80%;

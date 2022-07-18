@@ -1,46 +1,74 @@
-import React from 'react'
-import { NavLink, Link } from 'react-router-dom'
+import React, { useState } from 'react'
+import { NavLink } from 'react-router-dom'
+import { BiMenuAltRight } from 'react-icons/bi'
+import { IoIosCloseCircleOutline } from 'react-icons/io'
+import { FaBlog } from 'react-icons/fa'
 
-const Navbar = ({ toggleSidebar }) => {
+function NavBar () {
+  const [click, setClick] = useState(false)
+
+  const handleClick = () => setClick(!click)
   return (
-    <nav className='navbar'>
-      <ul className='navbar__list'>
-        <Link className='navbar__logo' exact to='/'>
-          Navbar App
-        </Link>
-        <li className='navbar__list__item'>
-          <NavLink className='navbar__link' to='/'>
-            Home
+    <>
+      <nav className='navbar'>
+        <div className='nav-container'>
+          <NavLink exact to='/' className='nav-logo'>
+            <FaBlog />
           </NavLink>
-        </li>
-        <li className='navbar__list__item'>
-          <NavLink className='navbar__link' to='/about'>
-            About
-          </NavLink>
-        </li>
-        <li className='navbar__list__item'>
-          <NavLink className='navbar__link' to='/services'>
-            Services
-          </NavLink>
-        </li>
-        <li className='navbar__list__item'>
-          <NavLink className='navbar__link' to='/gallery'>
-            Gallery
-          </NavLink>
-        </li>
-        <li className='navbar__list__item'>
-          <div className='navbar__link'>
-            Iniciar sesión
+
+          <ul className={click ? 'nav-menu active' : 'nav-menu'}>
+            <li className='nav-item'>
+              <NavLink
+                exact
+                to='/'
+                activeClassName='active'
+                className='nav-links'
+                onClick={handleClick}
+              >
+                Home
+              </NavLink>
+            </li>
+            <li className='nav-item'>
+              <NavLink
+                exact
+                to='/about'
+                activeClassName='active'
+                className='nav-links'
+                onClick={handleClick}
+              >
+                About
+              </NavLink>
+            </li>
+            <li className='nav-item'>
+              <NavLink
+                exact
+                to='/blog'
+                activeClassName='active'
+                className='nav-links'
+                onClick={handleClick}
+              >
+                Blog
+              </NavLink>
+            </li>
+            <li className='nav-item'>
+              <NavLink
+                exact
+                to='/contact'
+                activeClassName='active'
+                className='nav-links'
+                onClick={handleClick}
+              >
+                Contact Us
+              </NavLink>
+            </li>
+          </ul>
+          <div className='nav-icon' onClick={handleClick}>
+            {click ? <IoIosCloseCircleOutline /> : <BiMenuAltRight />}
           </div>
-        </li>
-        <div className='navbar__button' onClick={toggleSidebar}>
-          <div className='navbar__button__component' />
-          <div className='navbar__button__component' />
-          <div className='navbar__button__component' />
         </div>
-      </ul>
-    </nav>
+      </nav>
+    </>
   )
 }
 
-export default Navbar
+export default NavBar

@@ -1,21 +1,7 @@
-%input{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-width: 100%;
-  height: 100%;
-  margin-top: 10px;
-}
-
-.input{
-  @extend%input
-}
-
 .input-{
   &text{
     min-width: 300px;
-    min-height: 2rem;
+    height: auto;
     border: none;
     border-bottom: 0.2rem solid $primary;
     border-radius: 0px;
@@ -35,7 +21,8 @@
 }
 
 .input-label {
+  padding-top: 10px;
   font-size: 1.8rem;
-  color: $light;
+  color: $primary;
   font-weight: bold;
 }

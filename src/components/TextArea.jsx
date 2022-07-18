@@ -1,11 +1,12 @@
 import React from 'react'
 
-const Input = (props) => {
+const TextArea = (props) => {
   const { label, name, type, placeholder, value, onChange } = props
   return (
     <div className='flex-column'>
       <label className='input-label' htmlFor={name}>{label}</label>
-      <input
+      <textarea
+        rows='3'
         className='input-text'
         type={type}
         name={name}
@@ -17,4 +18,4 @@ const Input = (props) => {
   )
 }
 
-export default Input
+export default TextArea

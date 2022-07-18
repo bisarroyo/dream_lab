@@ -4,8 +4,8 @@ import BlogComponent from '@components/BlogComponent'
 
 const BlogHome = () => {
   return (
-    <div className='container-fluid flex-column home-container-blog'>
-      <h3>Blog</h3>
+    <div className='container-fluid home-container-blog'>
+      <h2>Blog</h2>
       <div className='flex-column'>
         <BlogComponent />
         <BlogComponent />

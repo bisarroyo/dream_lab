@@ -1,11 +1,11 @@
 import React from 'react'
 import Footer from '@containers/Footer'
-// import Navigation from '@containers/Navigation'
+import NavBar from '@containers/NavBar'
 
 const Layout = ({ children }) => {
   return (
     <>
-      {/* <Navigation /> */}
+      <NavBar />
       {children}
       <Footer />
     </>

@@ -1,10 +1,10 @@
 import React from 'react'
 
 const ButtonPrimary = (props) => {
-  const { text, type, disabled, onClick } = props
+  const { text, type, disabled, onClick, className } = props
   return (
     <button
-      className='btn-primary'
+      className={className}
       type={type}
       disabled={disabled}
       onClick={onClick}

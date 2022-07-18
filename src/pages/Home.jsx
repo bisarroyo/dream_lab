@@ -7,6 +7,8 @@ import HomeHeader from '@components/HomeHeader'
 import TextBoxContainer from '@containers/TextBoxContainer'
 import BlogHome from '@containers/BlogHome'
 import Contact from '@containers/Contact'
+import Portfolio from '@containers/Portfolio'
+import News from '@containers/News'
 
 const Home = () => {
   return (
@@ -21,7 +23,9 @@ const Home = () => {
         title3='API'
         text3='Profesional APIs for your business.'
       />
+      <Portfolio />
       <BlogHome />
+      <News />
       <Contact />
 
     </>
